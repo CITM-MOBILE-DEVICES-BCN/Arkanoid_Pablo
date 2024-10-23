@@ -23,11 +23,13 @@ public class Levelscompleted : MonoBehaviour
         {
             case 0:
                 StartCoroutine(LoadLevel("Level2"));
-                
+                Savegame.Instance.SaveGame();
+
 
                 break;
             case 1:
                 StartCoroutine(LoadLevel("Level1"));
+                Savegame.Instance.SaveGame();
                 break;
         }
 
