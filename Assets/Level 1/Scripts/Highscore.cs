@@ -16,7 +16,7 @@ public class Highscore : MonoBehaviour
     void Update()
     {
 
-        HighscoreText.text = "Highcore: " + ScoreManager.Instance.levelscore;
+        HighscoreText.text = "HighScore: " + ScoreManager.Instance.highscore;
 
     }
 }

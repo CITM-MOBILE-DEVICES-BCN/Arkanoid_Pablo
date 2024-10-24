@@ -56,7 +56,7 @@ public class RescaleUIColliders : MonoBehaviour
             // Optionally adjust the offset to match the position of the RectTransform
             boxCollider2D.offset = rectTransform.rect.center;
 
-            Debug.Log("Resized BoxCollider2D to: " + newSize);
+           // Debug.Log("Resized BoxCollider2D to: " + newSize);
         }
     }
 }

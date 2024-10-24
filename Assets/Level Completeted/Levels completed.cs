@@ -22,14 +22,10 @@ public class Levelscompleted : MonoBehaviour
         switch(ScoreManager.Instance.level %2)
         {
             case 0:
-                StartCoroutine(LoadLevel("Level2"));
-                Savegame.Instance.SaveGame();
-
-
+                StartCoroutine(LoadLevel("Level2"));  
                 break;
             case 1:
                 StartCoroutine(LoadLevel("Level1"));
-                Savegame.Instance.SaveGame();
                 break;
         }
 
