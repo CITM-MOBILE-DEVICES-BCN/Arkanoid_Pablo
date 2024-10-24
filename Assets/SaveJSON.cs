@@ -22,7 +22,6 @@ public class SaveJSON : MonoBehaviour
     {
         filePath = Application.dataPath + "/SavedFiles/setting.json";
 
-        // Crea la carpeta "SavedFiles" si no existe
         if (!System.IO.Directory.Exists(Application.dataPath + "/SavedFiles"))
         {
             System.IO.Directory.CreateDirectory(Application.dataPath + "/SavedFiles");
@@ -65,7 +64,7 @@ public class SaveJSON : MonoBehaviour
         {
             string json = System.IO.File.ReadAllText(filePath);
             PlayerData loadedData = JsonUtility.FromJson<PlayerData>(json);
-            // Verificar si el archivo existe
+           
             SceneManager.Instance.LoadScene(loadedData.scena);
 
             ScoreManager gameManager = FindObjectOfType<ScoreManager>();

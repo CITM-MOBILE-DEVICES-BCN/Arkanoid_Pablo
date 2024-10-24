@@ -10,7 +10,7 @@ public class ScoreManager : MonoBehaviour
     public static ScoreManager Instance { get; private set; }
 
     public int lives = 3;
-    public int score = 0; // The current score
+    public int score = 0; 
     public int levelscore = 0;
     public int level = 1;
     public int highscore = 0;
@@ -22,11 +22,11 @@ public class ScoreManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject); // Prevents destruction on scene load
+            DontDestroyOnLoad(gameObject); 
         }
         else
         {
-            Destroy(gameObject); // Destroy duplicates if they exist
+            Destroy(gameObject); 
         }
 
     }
@@ -38,7 +38,6 @@ public class ScoreManager : MonoBehaviour
         Highscore();
     }
 
-    // Method to add score and update the UI
     public void AddScore(int amount)
     {
         levelscore += 300;
@@ -51,7 +50,6 @@ public class ScoreManager : MonoBehaviour
         UpdateScoreUI();
     }
 
-    // Update the score in the UI
     public void UpdateScoreUI()
     {
         if (score % 4500 == 0 && score > 0)
