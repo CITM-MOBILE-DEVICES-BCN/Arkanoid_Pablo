@@ -16,7 +16,7 @@ public class Highscore : MonoBehaviour
     void Update()
     {
 
-        HighscoreText.text = "HighScore: " + ScoreManager.Instance.highscore;
+        HighscoreText.text = "HighScore: " + PlayerPrefs.GetInt("Highscore",ScoreManager.Instance.highscore);
 
     }
 }

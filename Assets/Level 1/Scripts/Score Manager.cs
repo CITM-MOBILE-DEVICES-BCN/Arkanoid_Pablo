@@ -43,7 +43,11 @@ public class ScoreManager : MonoBehaviour
     {
         levelscore += 300;
         score += amount;
-        Highscore();
+        if (levelscore> PlayerPrefs.GetInt("Highscore", ScoreManager.Instance.highscore))
+        {
+            Highscore();
+        }
+        
         UpdateScoreUI();
     }
 
