@@ -71,9 +71,9 @@ public class SaveJSON : MonoBehaviour
             ScoreManager gameManager = FindObjectOfType<ScoreManager>();
             if (gameManager != null)
             {
-                gameManager.highscore = loadedData.highScore;
-                gameManager.levelscore = loadedData.currentScore;
-                gameManager.lives = loadedData.lives;
+                ScoreManager.Instance.highscore = loadedData.highScore;
+                ScoreManager.Instance.levelscore = loadedData.currentScore;
+                ScoreManager.Instance.lives = loadedData.lives;
             }
             Time.timeScale = 1.0f;
         }
